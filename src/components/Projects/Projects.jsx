@@ -28,7 +28,8 @@ const Projects = () => {
       title: "AI Chatbot",
       description:
         "An AI-powered chatbot interface using React and OpenAI/Gemini API.",
-      liveLink: "https://weatherappbysourav.netlify.app/",
+      liveLink: "https://souravchatbot.netlify.app/",
+
       codeLink: "https://github.com/souraav09/react-Chatbot.git",
       image: chatbot,
     },
