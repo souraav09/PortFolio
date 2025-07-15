@@ -1,0 +1,78 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  flex-wrap: wrap;
+}
+
+.nav-logo {
+  font-size: 26px;
+  font-weight: bold;
+  background: linear-gradient(267deg, #d97cf3 0.36%, #4649dd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 3px rgba(217, 124, 243, 0.5);
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  font-size: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  background: linear-gradient(267deg, #d97cf3 0.36%, #4fc3f7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background: linear-gradient(267deg, #a166f4, #43f0f0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-connect {
+  padding: 20px 30px;
+  border-radius: 50px;
+  font-size: 22px;
+  cursor: pointer;
+  background: linear-gradient(267deg, #d97cf3 0.36%, #4c4ff3);
+  transition: 0.3s ease;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 30px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 18px;
+  }
+
+  .nav-connect {
+    font-size: 18px;
+    padding: 14px 24px;
+  }
+}
