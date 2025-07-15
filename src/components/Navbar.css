@@ -20,10 +20,11 @@
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 40px;
   font-size: 20px;
   list-style: none;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; 
+  white-space: nowrap;
 }
 
 .nav-menu a {
@@ -43,9 +44,9 @@
 }
 
 .nav-connect {
-  padding: 20px 30px;
+  padding: 14px 28px;
   border-radius: 50px;
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
   background: linear-gradient(267deg, #d97cf3 0.36%, #4c4ff3);
   transition: 0.3s ease;
@@ -55,24 +56,24 @@
   transform: scale(1.05);
 }
 
-/* 📱 Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px 30px;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
   }
 
   .nav-menu {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     font-size: 18px;
   }
 
   .nav-connect {
     font-size: 18px;
-    padding: 14px 24px;
+    padding: 12px 22px;
   }
 }
