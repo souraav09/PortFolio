@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import erenyeager from "../../assets/Eren jaeger.jpeg";
+import sourav from "../../assets/WhatsApp Image 2025-07-19 at 7.03.52 PM.jpeg";
 
 const About = () => {
   return (
@@ -11,12 +11,7 @@ const About = () => {
 
       <div className="about-sections">
         <div className="about-left">
-          <img
-            src={erenyeager}
-            alt="pic"
-            width={"200px"}
-            style={{ borderRadius: "50%" }}
-          />
+          <img src={sourav} alt="pic" />
         </div>
 
         <div className="about-right">
