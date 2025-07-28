@@ -1,6 +1,6 @@
 import React from "react";
-import "./About.css";
-import sourav from "../../assets/WhatsApp Image 2025-07-19 at 7.03.52 PM.jpeg";
+import "../styles/About.css";
+import sourav from "../assets/WhatsApp Image 2025-07-19 at 7.03.52 PM.jpeg";
 
 const About = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
-import "./Projects.css";
-import amazon from "../../assets/Screenshot from 2025-07-15 12-06-10.png";
-import weather from "../../assets/Screenshot from 2025-07-15 12-28-10.png";
-import chatbot from "../../assets/Screenshot from 2025-07-15 12-28-52.png";
+import "../styles/Projects.css";
+import amazon from "../assets/Screenshot from 2025-07-15 12-06-10.png";
+import weather from "../assets/Screenshot from 2025-07-15 12-28-10.png";
+import chatbot from "../assets/Screenshot from 2025-07-15 12-28-52.png";
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
 

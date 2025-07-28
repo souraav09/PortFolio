@@ -1,21 +1,19 @@
-import React, { useState } from "react";
-import "./Contact.css";
+import React from "react";
+import "../styles/Contact.css";
+import { useForm } from "react-hook-form";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-  const handleChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Thanks for contacting me, " + formData.name + "!");
-    setFormData({ name: "", email: "", message: "" });
+  const onSubmit = (data) => {
+    alert(`Thanks for contacting me, ${data.name}!`);
+    reset(); 
   };
 
   return (
@@ -23,9 +21,7 @@ const Contact = () => {
       <h1 className="contact-heading">Get in Touch</h1>
       <div className="contact-container">
         <div className="contact-left">
-          <h2>
-            I'm always open to new collaborations! Drop a message anytime.
-          </h2>
+          <h2>I'm always open to new collaborations! Drop a message anytime.</h2>
 
           <div className="social-line">
             <FaTwitter className="icon" />
@@ -59,6 +55,7 @@ const Contact = () => {
               linkedin.com/in/souravbhagat
             </a>
           </div>
+
           <div className="social-line">
             <i className="icon fas fa-envelope" />
             <a href="mailto:souravbhagat035@gmail.com">
@@ -67,34 +64,35 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* RIGHT SIDE */}
-        <form className="contact-form" onSubmit={handleSubmit}>
+        
+        <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
-            name="name"
             placeholder="Your Name"
-            required
-            value={formData.name}
-            onChange={handleChange}
+            {...register("name", { required: "Name is required" })}
           />
+          {errors.name && <p className="form-error">{errors.name.message}</p>}
+
           <input
             type="email"
-            name="email"
             placeholder="Your Email"
-            required
-            value={formData.email}
-            onChange={handleChange}
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^\S+@\S+$/i,
+                message: "Invalid email address",
+              },
+            })}
           />
+          {errors.email && <p className="form-error">{errors.email.message}</p>}
+
           <textarea
-            name="message"
             placeholder="Your Message"
-            required
-            value={formData.message}
-            onChange={handleChange}
+            {...register("message", { required: "Message is required" })}
           />
-          <button type="submit" className="contact-button">
-            Send Message
-          </button>
+          {errors.message && <p className="form-error">{errors.message.message}</p>}
+
+          <button type="submit" className="contact-button">Send Message</button>
         </form>
       </div>
     </div>

@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
 
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
+import Navbar from "./features/Navbar";
+import Header from "./features/Header";
+import About from "./features/About";
+import Projects from "./features/Projects";
+import Contact from "./features/Contact";
+import Footer from "./features/Footer";
 
 function App() {
   return (
